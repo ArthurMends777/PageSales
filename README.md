@@ -48,6 +48,7 @@ Este é um projeto Laravel desenvolvido para gerenciar vendas de produtos, permi
     ```bash
     php artisan migrate
     ```
+    após isso abra seu banco de dados e execute o comando sql que está na pasta "MySQL"
 
 8. Inicie o servidor de desenvolvimento:
 
