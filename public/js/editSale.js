@@ -1,12 +1,28 @@
-$(document).ready(function() {
-    $('#produto_id, #quantidade').on('change', function() {
-        var produtoId = $('#produto_id').val();
-        var quantidade = $('#quantidade').val();
-        var preco = $('#produto_id option:selected').data('preco');
-        
+document.addEventListener("DOMContentLoaded", function() {
+    var produtoIdElement = document.getElementById('produto_id');
+    var quantidadeElement = document.getElementById('quantidade');
+
+    produtoIdElement.addEventListener('change', function() {
+        var produtoId = produtoIdElement.value;
+        var quantidade = quantidadeElement.value;
+        var precoOption = produtoIdElement.querySelector('option:checked');
+        var preco = precoOption ? parseFloat(precoOption.getAttribute('data-preco')) : null;
+
         if (produtoId && quantidade && preco) {
             var valorTotal = quantidade * preco;
-            $('#valor_total').val(valorTotal.toFixed(2));
+            document.getElementById('valor_total').value = valorTotal.toFixed(2);
+        }
+    });
+
+    quantidadeElement.addEventListener('change', function() {
+        var produtoId = produtoIdElement.value;
+        var quantidade = quantidadeElement.value;
+        var precoOption = produtoIdElement.querySelector('option:checked');
+        var preco = precoOption ? parseFloat(precoOption.getAttribute('data-preco')) : null;
+
+        if (produtoId && quantidade && preco) {
+            var valorTotal = quantidade * preco;
+            document.getElementById('valor_total').value = valorTotal.toFixed(2);
         }
     });
 });

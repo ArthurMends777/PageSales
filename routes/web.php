@@ -6,7 +6,6 @@ use App\Http\Controllers\VendaController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\FormaPagamentoController;
-use App\Http\Controllers\ParcelaController;
 
 Route::get('/', function () {
     return redirect()->route('vendas.index');

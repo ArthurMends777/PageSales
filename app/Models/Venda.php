@@ -29,10 +29,5 @@ class Venda extends Model
     {
         return $this->belongsTo(FormaPagamento::class);
     }
-
-    public function parcelas()
-    {
-        return $this->hasMany(Parcela::class);
-    }
 }
 
