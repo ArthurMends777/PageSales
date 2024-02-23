@@ -1,0 +1,4 @@
+INSERT INTO formas_pagamento (nome, created_at, updated_at) VALUES
+('PIX', NOW(), NOW()),
+('Cartão de crédito', NOW(), NOW()),
+('Boleto', NOW(), NOW());
