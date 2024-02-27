@@ -4,7 +4,7 @@ Este é um projeto Laravel desenvolvido para gerenciar vendas de produtos, permi
 
 ## Requisitos
 
-- PHP >= 7.4
+- PHP >= 8.0
 - Composer
 - Node.js
 - Banco de Dados MySQL
